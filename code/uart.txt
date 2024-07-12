@@ -1,0 +1,91 @@
+#include "MKL46Z4.h"
+
+// UART0, PTA1=RX and PTA2=TX
+void UART_Init(void) {
+  SIM->SOPT2 |= SIM_SOPT2_UART0SRC(1); // Clock to UART0 MCGFLLCLK 48MHz
+
+  SIM->SCGC4 |= SIM_SCGC4_UART0_MASK; // Enable clock to UART0
+
+  SIM->SCGC5 |= SIM_SCGC5_PORTA_MASK; // Enable clock to PORTA
+
+  PORTA->PCR[1] = PORT_PCR_MUX(2); // PTA1 as UART0_RX
+
+  PORTA->PCR[2] = PORT_PCR_MUX(2); // PTA2 as UART0_TX
+
+  UART0->C2 = 0x00; // TX and RX both disabled
+
+  UART0->BDH = 0x00; // Clear BDH to configure baud rate
+
+  UART0->BDL = 0x0C; // BR = 416 (for 9600 baud with 48MHz clock)
+
+  UART0->C1 = 0x00; // 8-bit data, no parity
+
+  UART0->C3 = 0x00;
+
+  UART0->C4 = 0x0F; // OSR = 16
+
+  UART0->C5 = 0x00; // Default settings
+
+  UART0->C2 = 0x0C; // TX and RX enable
+}
+
+void InitLEDG(void) {
+  SIM->SCGC5 |= SIM_SCGC5_PORTD_MASK; // Enable clock to PORTD
+
+  PORTD->PCR[5] = PORT_PCR_MUX(1); // Declare pin as GPIO
+
+  GPIOD->PDDR |= 0x00000020; // Set pin as output
+
+  GPIOD->PDOR |= 0x00000020; // LED initially off
+}
+
+void InitSYSTICK(void) {
+  SysTick->CTRL = 0; // Disable timer
+  SysTick->LOAD = 0x00FFFFFF; // Load with full value
+  SysTick->VAL = 0; // Write anything to reset register
+  SysTick->CTRL = 0x00000004; // Enable counter, use bus clock
+}
+
+void delay(void) {
+  SysTick->VAL = 0; // Reset counter
+  SysTick->CTRL |= 0x00000001; // Enable counter
+
+  while ((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) == 0) {
+    // Wait for the COUNT flag to become 1
+  }
+
+  SysTick->CTRL &= ~0x00000001; // Disable counter
+}
+
+unsigned char UART_InChar(void) {
+  while ((UART0->S1 & UART0_S1_RDRF_MASK) == 0) {
+    // Wait until RX buffer is full
+  }
+
+  return UART0->D;
+}
+
+void UART_OutChar(unsigned char data) {
+  while ((UART0->S1 & UART0_S1_TDRE_MASK) == 0) {
+    // Wait until TX buffer is empty (TDRE flag is set)
+  }
+
+  UART0->D = data;
+}
+
+int main() {
+  UART_Init();
+  InitLEDG();
+  InitSYSTICK();
+  unsigned char x = 'a';
+
+  while (1) {
+    UART_OutChar(x);
+    GPIOD->PDOR &= ~(1u << 5); // Turn on LED
+    delay();
+    GPIOD->PDOR |= (1u << 5); // Turn off LED
+    delay();
+  }
+
+  return 0;
+}

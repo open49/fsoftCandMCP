@@ -1,0 +1,290 @@
+###############################################################################
+#
+# IAR ELF Linker V9.40.1.364/W64 for ARM                  12/Jul/2023  21:13:08
+# Copyright 2007-2023 IAR Systems AB.
+#
+#    Output file  =
+#        D:\Fresher
+#        _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Exe\Blink_Led.out
+#    Map file     =
+#        D:\Fresher
+#        _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\List\Blink_Led.map
+#    Command line =
+#        -f "D:\Fresher
+#        _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Exe\Blink_Led.out.rsp"
+#        ("D:\Fresher
+#        _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Obj\source_5634686896477721948.dir\LedBlinking.o"
+#        "D:\Fresher
+#        _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Obj\start_up_14329341704235263327.dir\startup_MKL46Z4.o"
+#        "D:\Fresher
+#        _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Obj\start_up_14329341704235263327.dir\system_MKL46Z4.o"
+#        --no_out_extension -o "D:\Fresher
+#        _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Exe\Blink_Led.out"
+#        --map "D:\Fresher
+#        _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\List\Blink_Led.map"
+#        --config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.2\arm/config/linker/NXP/MKL46Z256xxx4.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale --cpu=Cortex-M0+
+#        --fpu=None) --dependencies=n "D:\Fresher
+#        _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Exe\Blink_Led.out.iar_deps"
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3ff] |
+                [from 0x410 to 0x3'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 4K, alignment = 8 { };
+"P3":  place in [from 0x1fff'e000 to 0x1fff'ffff] |
+                [from 0x2000'0000 to 0x2000'5fff] {
+          rw, block CSTACK, block HEAP };
+"P5":  place in [from 0x400 to 0x40f] { section FlashConfig };
+
+No sections matched the following patterns:
+
+  ro section application_specific_ro  in "P2|P4"
+  rw section application_specific_rw  in "P2|P4"
+
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                     0xc0
+  .intvec          ro code          0x0   0xc0  startup_MKL46Z4.o [2]
+                                 - 0xc0   0xc0
+
+"P1":                                    0x22a
+  .text            ro code         0xc0   0xb0  LedBlinking.o [1]
+  .text            ro code        0x170   0x3c  zero_init3.o [4]
+  .text            ro code        0x1ac   0x28  data_init.o [4]
+  .text            ro code        0x1d4   0x24  startup_MKL46Z4.o [2]
+  .iar.init_table  const          0x1f8   0x10  - Linker created -
+  .text            ro code        0x208   0x1e  cmain.o [4]
+  .text            ro code        0x226    0x4  low_level_init.o [3]
+  .text            ro code        0x22a    0x8  exit.o [3]
+  .text            ro code        0x232    0x2  startup_MKL46Z4.o [2]
+  .text            ro code        0x234    0xa  cexit.o [4]
+  .text            ro code        0x23e    0x2  startup_MKL46Z4.o [2]
+  .text            ro code        0x240   0x14  exit.o [5]
+  .text            ro code        0x254   0x1c  cstartup_M.o [4]
+  .text            ro code        0x270    0xc  system_MKL46Z4.o [2]
+  .text            ro code        0x27c    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x284    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x28c    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x294    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x29c    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x2a4    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x2ac    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x2b4    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x2bc    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x2c4    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x2cc    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x2d4    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x2dc    0x8  startup_MKL46Z4.o [2]
+  .text            ro code        0x2e4    0x2  startup_MKL46Z4.o [2]
+  .text            ro code        0x2e6    0x2  startup_MKL46Z4.o [2]
+  .text            ro code        0x2e8    0x2  startup_MKL46Z4.o [2]
+  .rodata          const          0x2ea    0x0  zero_init3.o [4]
+                                - 0x2ea  0x22a
+
+"P5":                                     0x10
+  FlashConfig      ro code        0x400   0x10  startup_MKL46Z4.o [2]
+                                - 0x410   0x10
+
+"P3", part 1 of 2:                         0x4
+  .bss             zero     0x1fff'e000    0x4  LedBlinking.o [1]
+                          - 0x1fff'e004    0x4
+
+"P3", part 2 of 2:                       0x800
+  CSTACK                    0x1fff'e008  0x800  <Block>
+    CSTACK         uninit   0x1fff'e008  0x800  <Block tail>
+                          - 0x1fff'e808  0x800
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x2ea        0x3ff     0x116
+        0x410     0x3'ffff  0x3'fbf0
+  0x1fff'e004  0x1fff'e007       0x4
+  0x1fff'e808  0x1fff'ffff    0x17f8
+  0x2000'0000  0x2000'5fff    0x6000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x4:
+          0x1fff'e000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module             ro code  ro data  rw data
+    ------             -------  -------  -------
+command line/config:
+    --------------------------------------------
+    Total:
+
+D:\Fresher _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Obj\source_5634686896477721948.dir: [1]
+    LedBlinking.o          176                 4
+    --------------------------------------------
+    Total:                 176                 4
+
+D:\Fresher _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Obj\start_up_14329341704235263327.dir: [2]
+    startup_MKL46Z4.o      358
+    system_MKL46Z4.o        12
+    --------------------------------------------
+    Total:                 370
+
+dl6M_tln.a: [3]
+    exit.o                   8
+    low_level_init.o         4
+    --------------------------------------------
+    Total:                  12
+
+rt6M_tl.a: [4]
+    cexit.o                 10
+    cmain.o                 30
+    cstartup_M.o            28
+    data_init.o             40
+    zero_init3.o            60
+    --------------------------------------------
+    Total:                 168
+
+shb_l.a: [5]
+    exit.o                  20
+    --------------------------------------------
+    Total:                  20
+
+    Linker created                   16    2'048
+------------------------------------------------
+    Grand Total:           746       16    2'052
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+.iar.init_table$$Base         0x1f8         --   Gb  - Linker created -
+.iar.init_table$$Limit        0x208         --   Gb  - Linker created -
+?main                         0x209        Code  Gb  cmain.o [4]
+ADC0_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+CMP0_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+CSTACK$$Base            0x1fff'e008         --   Gb  - Linker created -
+CSTACK$$Limit           0x1fff'e808         --   Gb  - Linker created -
+DAC0_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+DMA0_DriverIRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+DMA0_IRQHandler               0x27d        Code  Wk  startup_MKL46Z4.o [2]
+DMA1_DriverIRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+DMA1_IRQHandler               0x285        Code  Wk  startup_MKL46Z4.o [2]
+DMA2_DriverIRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+DMA2_IRQHandler               0x28d        Code  Wk  startup_MKL46Z4.o [2]
+DMA3_DriverIRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+DMA3_IRQHandler               0x295        Code  Wk  startup_MKL46Z4.o [2]
+DefaultISR                    0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+FTFA_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+HardFault_Handler             0x23f        Code  Wk  startup_MKL46Z4.o [2]
+I2C0_DriverIRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+I2C0_IRQHandler               0x29d        Code  Wk  startup_MKL46Z4.o [2]
+I2C1_DriverIRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+I2C1_IRQHandler               0x2a5        Code  Wk  startup_MKL46Z4.o [2]
+I2S0_DriverIRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+I2S0_IRQHandler               0x2d5        Code  Wk  startup_MKL46Z4.o [2]
+LCD_IRQHandler                0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+LLWU_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+LPTMR0_IRQHandler             0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+LVD_LVW_IRQHandler            0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+MCG_IRQHandler                0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+NMI_Handler                   0x233        Code  Wk  startup_MKL46Z4.o [2]
+PIT_IRQHandler                0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+PORTA_IRQHandler              0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+PORTC_PORTD_IRQHandler        0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+PendSV_Handler                0x2e7        Code  Wk  startup_MKL46Z4.o [2]
+RTC_IRQHandler                0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+RTC_Seconds_IRQHandler        0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+Region$$Table$$Base           0x1f8         --   Gb  - Linker created -
+Region$$Table$$Limit          0x208         --   Gb  - Linker created -
+Reserved20_IRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+Reset_Handler                 0x1d5        Code  Wk  startup_MKL46Z4.o [2]
+SPI0_DriverIRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+SPI0_IRQHandler               0x2ad        Code  Wk  startup_MKL46Z4.o [2]
+SPI1_DriverIRQHandler         0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+SPI1_IRQHandler               0x2b5        Code  Wk  startup_MKL46Z4.o [2]
+SVC_Handler                   0x2e5        Code  Wk  startup_MKL46Z4.o [2]
+SysTick_Handler               0x2e9        Code  Wk  startup_MKL46Z4.o [2]
+SystemInit                    0x271   0x8  Code  Gb  system_MKL46Z4.o [2]
+TPM0_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+TPM1_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+TPM2_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+TSI0_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+UART0_DriverIRQHandler        0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+UART0_IRQHandler              0x2bd        Code  Wk  startup_MKL46Z4.o [2]
+UART1_DriverIRQHandler        0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+UART1_IRQHandler              0x2c5        Code  Wk  startup_MKL46Z4.o [2]
+UART2_DriverIRQHandler        0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+UART2_IRQHandler              0x2cd        Code  Wk  startup_MKL46Z4.o [2]
+USB0_IRQHandler               0x2dd        Code  Wk  startup_MKL46Z4.o [2]
+__Vectors                       0x0         --   Gb  startup_MKL46Z4.o [2]
+__Vectors_End                  0xc0        Data  Gb  startup_MKL46Z4.o [2]
+__Vectors_Size {Abs}           0xc0         --   Gb  startup_MKL46Z4.o [2]
+__cmain                       0x209        Code  Gb  cmain.o [4]
+__exit                        0x241  0x14  Code  Gb  exit.o [5]
+__iar_data_init3              0x1ad  0x28  Code  Gb  data_init.o [4]
+__iar_program_start           0x255        Code  Gb  cstartup_M.o [4]
+__iar_zero_init3              0x171  0x3c  Code  Gb  zero_init3.o [4]
+__low_level_init              0x227   0x4  Code  Gb  low_level_init.o [3]
+__vector_table                  0x0        Data  Gb  startup_MKL46Z4.o [2]
+__vector_table_0x1c            0x1c        Data  Gb  startup_MKL46Z4.o [2]
+_call_main                    0x215        Code  Gb  cmain.o [4]
+_exit                         0x235        Code  Gb  cexit.o [4]
+count                   0x1fff'e000   0x4  Data  Gb  LedBlinking.o [1]
+delay                         0x131  0x12  Code  Gb  LedBlinking.o [1]
+exit                          0x22b   0x8  Code  Gb  exit.o [3]
+initLed                        0xeb  0x44  Code  Gb  LedBlinking.o [1]
+main                           0xc1  0x2a  Code  Gb  LedBlinking.o [1]
+
+
+[1] = D:\Fresher _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Obj\source_5634686896477721948.dir
+[2] = D:\Fresher _All\FRESHER_2023\HN23_FRF_EMB_03_Hoang_Anh\Document_HN23\Blink_Led_Project\project\Debug\Obj\start_up_14329341704235263327.dir
+[3] = dl6M_tln.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+    746 bytes of readonly  code memory
+     16 bytes of readonly  data memory
+  2'052 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

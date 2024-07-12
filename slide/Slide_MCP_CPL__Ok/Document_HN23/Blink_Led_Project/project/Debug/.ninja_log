@@ -1,0 +1,15 @@
+# ninja log v5
+4	127	7106921332227789	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Obj/start_up_14329341704235263327.dir/startup_MKL46Z4.o	2f648a19624e581d
+78	422	7106921334821793	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Obj/source_5634686896477721948.dir/LedBlinking.o	3133cf805640d08a
+0	424	7106921334821793	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Obj/start_up_14329341704235263327.dir/system_MKL46Z4.o	6658b2bf4562a5cf
+426	604	7106921336948432	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Exe/Blink_Led.out	7b47c2c171e3cc7f
+14	804	7108654836569863	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Obj/source_5634686896477721948.dir/LedBlinking.o	3133cf805640d08a
+806	1125	7108654840071214	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Exe/Blink_Led.out	7b47c2c171e3cc7f
+15	345	7108667789252030	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Obj/source_5634686896477721948.dir/LedBlinking.o	3f83b63801d3285e
+9	176	7108668700882303	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Obj/source_5634686896477721948.dir/LedBlinking.o	3133cf805640d08a
+2	190	7108668700947946	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Obj/start_up_14329341704235263327.dir/system_MKL46Z4.o	6658b2bf4562a5cf
+192	261	7108668701718421	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Exe/Blink_Led.out	7b47c2c171e3cc7f
+4	344	7108721133783087	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Obj/source_5634686896477721948.dir/LedBlinking.o	3133cf805640d08a
+349	447	7108721134933763	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Exe/Blink_Led.out	7b47c2c171e3cc7f
+2	280	7108743881276875	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Obj/source_5634686896477721948.dir/LedBlinking.o	3133cf805640d08a
+282	355	7108743882113274	D:/Fresher _All/FRESHER_2023/HN23_FRF_EMB_03_Hoang_Anh/Document_HN23/Blink_Led_Project/project/Debug/Exe/Blink_Led.out	7b47c2c171e3cc7f
